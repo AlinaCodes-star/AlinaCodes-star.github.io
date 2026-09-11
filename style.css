@@ -341,16 +341,78 @@ p { margin: 0; }
   color: var(--text);
 }
 
-.contacts__cta {
-  gap: 14px;
-  padding: 18px 36px;
-  font-size: 17px;
-}
-
 .contacts__note {
   font-size: 15px;
   color: rgba(249,244,237,.45);
 }
+
+/* ---------- Форма заявки ---------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.form__row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form__label {
+  font-size: 14px;
+  color: rgba(249,244,237,.62);
+}
+
+.form__input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(249,244,237,.16);
+  border-radius: 12px;
+  background: rgba(249,244,237,.04);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  transition: border-color .18s ease;
+}
+
+.form__input::placeholder { color: rgba(249,244,237,.35); }
+
+.form__input:focus { border-color: var(--accent); }
+
+.form__textarea { resize: vertical; min-height: 100px; }
+
+/* Honeypot: приховане для людини, доступне для бота */
+.form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form__submit {
+  align-self: flex-start;
+  margin-top: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.form__submit:disabled {
+  opacity: .6;
+  cursor: default;
+}
+
+.form__status {
+  min-height: 1.3em;
+  font-size: 15px;
+}
+
+.form__status[data-kind="success"] { color: #a8b98a; }
+.form__status[data-kind="error"]   { color: var(--accent); }
+.form__status[data-kind="pending"] { color: rgba(249,244,237,.55); }
 
 /* ---------- 6. Підвал ---------- */
 .site-footer {
@@ -424,9 +486,9 @@ p { margin: 0; }
     color: rgba(249,244,237,.8);
   }
 
-  /* Головна кнопка переїжджає в липку панель */
-  .hero__cta,
-  .contacts__cta { display: none; }
+  /* Головна кнопка в геро переїжджає в липку панель.
+     Кнопку форми ("Надіслати") на телефоні лишаємо — вона не дублікат. */
+  .hero__cta { display: none; }
 
   /* Мітка секції — дрібний підпис над змістом */
   .section__inner {

@@ -56,7 +56,7 @@
 
         <p class="hero__subtitle">Створюю сайти-візитівки — від ідеї до готової сторінки</p>
 
-        <a class="btn hero__cta" href="https://github.com/AlinaCodes-star" target="_blank" rel="noopener">
+        <a class="btn hero__cta" href="#contact">
           Написати мені <span class="btn__arrow" aria-hidden="true">→</span>
         </a>
       </div>
@@ -111,11 +111,47 @@
     <!-- 5. Контакти -->
     <section class="section section--contact" id="contact">
       <div class="contacts">
-        <h2 class="contacts__title">Напиши мені на GitHub</h2>
-        <a class="btn contacts__cta" href="https://github.com/AlinaCodes-star" target="_blank" rel="noopener">
-          AlinaCodes-star <span class="btn__arrow" aria-hidden="true">↗</span>
-        </a>
-        <p class="contacts__note">Відповідаю на всі повідомлення.</p>
+        <h2 class="contacts__title">Напиши мені</h2>
+        <p class="contacts__note">Відповідаю на всі заявки.</p>
+
+        <form class="form" id="request-form" novalidate>
+          <div class="form__row">
+            <label class="form__label" for="field-name">Імʼя</label>
+            <input class="form__input" type="text" id="field-name" name="name"
+                   maxlength="100" autocomplete="name" required>
+          </div>
+
+          <div class="form__row">
+            <label class="form__label" for="field-contact">Контакт</label>
+            <input class="form__input" type="text" id="field-contact" name="contact"
+                   placeholder="Telegram, пошта чи телефон" maxlength="200" required>
+          </div>
+
+          <div class="form__row">
+            <label class="form__label" for="field-termin">Коли потрібен сайт</label>
+            <input class="form__input" type="text" id="field-termin" name="termin"
+                   placeholder="необовʼязково" maxlength="200">
+          </div>
+
+          <div class="form__row">
+            <label class="form__label" for="field-comment">Коментар</label>
+            <textarea class="form__input form__textarea" id="field-comment" name="comment"
+                      placeholder="розкажи трохи про задум — необовʼязково"
+                      maxlength="2000" rows="4"></textarea>
+          </div>
+
+          <!-- Пастка для ботів: людина цього поля не бачить -->
+          <div class="form__honeypot" aria-hidden="true">
+            <label for="field-website">Не заповнюй це поле</label>
+            <input type="text" id="field-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="btn form__submit" type="submit">
+            Надіслати <span class="btn__arrow" aria-hidden="true">→</span>
+          </button>
+
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
@@ -126,11 +162,12 @@
 
   <!-- Липка панель — тільки на телефоні -->
   <div class="sticky-cta">
-    <a class="btn sticky-cta__btn" href="https://github.com/AlinaCodes-star" target="_blank" rel="noopener">
+    <a class="btn sticky-cta__btn" href="#contact">
       Написати мені <span class="btn__arrow" aria-hidden="true">→</span>
     </a>
     <p class="sticky-cta__note">Аліна · 2026</p>
   </div>
 
+  <script src="form.js" defer></script>
 </body>
 </html>
