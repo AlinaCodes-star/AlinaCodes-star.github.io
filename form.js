@@ -54,6 +54,10 @@
 
       if (response.ok && result.ok) {
         showStatus('Дякую! Я відповім найближчим часом.', 'success');
+        // generate_lead — стандартна назва GA4 саме для «форма заявки
+        // надіслана успішно». Рахуємо тільки реальний успіх, а не
+        // будь-яку спробу відправки.
+        gtag('event', 'generate_lead');
         form.reset();
       } else {
         showStatus(result.error || 'Не вдалося надіслати. Спробуй ще раз.', 'error');
