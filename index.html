@@ -25,8 +25,52 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=Manrope:wght@400;500;600&display=swap">
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Consent Mode v2: за замовчуванням усе заборонено.
+       Це має стояти ДО завантаження gtag.js і ДО config-виклику —
+       лічильник побачить цю відмову раніше, ніж встигне щось зібрати. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9THJDVYL9Q"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-9THJDVYL9Q');
+  </script>
 </head>
 <body>
+
+  <!-- Банер згоди на аналітику. Прихований за замовчуванням (hidden) —
+       consent.js сам вирішує, показувати його чи ні, залежно від
+       попереднього вибору людини. -->
+  <div class="cookie-banner" id="cookie-banner" hidden>
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__text">
+        <h2 class="cookie-banner__title">Аналітика</h2>
+        <p class="cookie-banner__desc">
+          Використовую Google Analytics, щоб бачити, скільки людей заходить на сайт.
+          Це не обовʼязково — можеш відхилити.
+        </p>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="btn-ghost cookie-banner__decline" type="button" id="cookie-decline">
+          Відхилити
+        </button>
+        <button class="btn cookie-banner__accept" type="button" id="cookie-accept">
+          Прийняти
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- 1. Шапка -->
   <header class="site-header">
@@ -169,5 +213,6 @@
   </div>
 
   <script src="form.js" defer></script>
+  <script src="consent.js" defer></script>
 </body>
 </html>

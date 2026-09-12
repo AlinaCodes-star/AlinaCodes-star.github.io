@@ -422,6 +422,62 @@ p { margin: 0; }
   color: rgba(249,244,237,.35);
 }
 
+/* ---------- Банер згоди на аналітику ---------- */
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(36,33,28,.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line);
+}
+
+/* Без цього правила банер показувався б завжди: атрибут [hidden]
+   і клас .cookie-banner мають однакову специфічність, а автор-стилі
+   переважають стандартні стилі браузера. */
+.cookie-banner[hidden] { display: none; }
+
+.cookie-banner__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 960px;
+}
+
+.cookie-banner__text { flex: 1 1 320px; min-width: 0; }
+
+.cookie-banner__title {
+  margin-bottom: 6px;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.cookie-banner__desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(249,244,237,.62);
+}
+
+.cookie-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cookie-banner__decline,
+.cookie-banner__accept {
+  min-height: 44px;
+  font-size: 15px;
+}
+
 /* ---------- Липка панель (тільки телефон) ---------- */
 .sticky-cta { display: none; }
 
