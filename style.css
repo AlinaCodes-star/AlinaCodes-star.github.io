@@ -276,6 +276,13 @@ p { margin: 0; }
   object-fit: cover;
   object-position: 52% 40%;
   filter: saturate(.62) contrast(.9) brightness(.86);
+  animation: hero-kenburns 9s ease-in-out infinite alternate;
+}
+
+/* Плавний зум — «кінематографічний кадр» замість статичного фото */
+@keyframes hero-kenburns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.14); }
 }
 
 .hero__media::after {
