@@ -372,7 +372,7 @@ p { margin: 0; }
 }
 
 /* ---------- 3. Про мене ---------- */
-.section--about { padding: clamp(90px, 12vw, 170px) var(--pad-x); }
+.section--about { padding: clamp(24px, 4vw, 48px) var(--pad-x); }
 
 .about__text {
   flex: 1 1 420px;
@@ -386,7 +386,7 @@ p { margin: 0; }
 }
 
 /* ---------- 4. Що я вмію ---------- */
-.section--skills { padding: clamp(70px, 10vw, 140px) var(--pad-x); }
+.section--skills { padding: clamp(20px, 3vw, 36px) var(--pad-x) clamp(36px, 5vw, 64px); }
 
 .skills {
   display: flex;
@@ -435,7 +435,7 @@ p { margin: 0; }
 }
 
 /* ---------- 4.5 Роботи ---------- */
-.section--work { padding: clamp(70px, 10vw, 140px) var(--pad-x); }
+.section--work { padding: clamp(36px, 5vw, 64px) var(--pad-x); }
 
 .work__cta {
   flex: 1 1 420px;
@@ -450,7 +450,7 @@ p { margin: 0; }
 
 /* ---------- 5. Контакти ---------- */
 .section--contact {
-  padding: clamp(90px, 13vw, 180px) var(--pad-x) clamp(70px, 9vw, 120px);
+  padding: clamp(40px, 6vw, 84px) var(--pad-x) clamp(36px, 5vw, 64px);
 }
 
 .contacts {
