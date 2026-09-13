@@ -335,6 +335,20 @@ p { margin: 0; }
   color: rgba(249,244,237,.62);
 }
 
+/* ---------- 4.5 Роботи ---------- */
+.section--work { padding: clamp(70px, 10vw, 140px) var(--pad-x); }
+
+.work__cta {
+  flex: 1 1 420px;
+  min-width: 0;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
 /* ---------- 5. Контакти ---------- */
 .section--contact {
   padding: clamp(90px, 13vw, 180px) var(--pad-x) clamp(70px, 9vw, 120px);
@@ -589,6 +603,13 @@ p { margin: 0; }
   .section--skills { padding: 40px 24px 20px; }
 
   .section--skills .section__inner { gap: 8px; }
+
+  .section--work { padding: 40px 24px 44px; }
+
+  .work__cta {
+    flex: none;
+    font-size: 28px;
+  }
 
   .skills { flex: none; }
 
