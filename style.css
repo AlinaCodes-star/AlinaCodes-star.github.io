@@ -275,7 +275,7 @@ p { margin: 0; }
   object-fit: contain;
   object-position: center;
   filter: saturate(.62) contrast(.9) brightness(.86);
-  animation: hero-kenburns 2.5s ease-in-out infinite alternate;
+  animation: hero-kenburns 5s ease-in-out infinite alternate;
 }
 
 /* Плавний зум — «кінематографічний кадр» замість статичного фото */
