@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=Manrope:wght@400;500;600&display=swap">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=6">
 
   <!-- Google Consent Mode v2: за замовчуванням усе заборонено.
        Це має стояти ДО завантаження gtag.js і ДО config-виклику —
@@ -48,6 +48,10 @@
   </script>
 </head>
 <body>
+
+  <!-- Фонове фото ставка з лілеями — зафіксоване точно під розмір екрана,
+       щоб не розтягуватись на всю висоту сторінки -->
+  <div class="page-bg" aria-hidden="true"></div>
 
   <!-- Банер згоди на аналітику. Прихований за замовчуванням (hidden) —
        consent.js сам вирішує, показувати його чи ні, залежно від
@@ -120,6 +124,8 @@
           Написати мені <span class="btn__arrow" aria-hidden="true">→</span>
         </a>
       </div>
+
+      <img class="hero__pond-photo" src="images/lily-pond.webp" alt="" aria-hidden="true">
     </section>
 
     <!-- 3. Про мене -->
