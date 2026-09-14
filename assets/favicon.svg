@@ -1,6 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#d67f48"/>
-  <text x="32" y="45" text-anchor="middle"
-        font-family="Georgia, 'Times New Roman', serif"
-        font-size="40" font-weight="700" fill="#201e1d">А</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="faviconStarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffc6a5"/>
+      <stop offset="100%" stop-color="#b2622d"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(50,50) scale(1.5) translate(-50,-50)">
+    <path d="M50,5 L61.76,33.82 L92.8,36.1 L69.02,56.18 L76.45,86.4 L50,70 L23.55,86.4 L30.98,56.18 L7.2,36.1 L38.24,33.82 Z" fill="url(#faviconStarGradient)"/>
+    <text x="50" y="68" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="58" fill="#201e1d">А</text>
+  </g>
 </svg>
